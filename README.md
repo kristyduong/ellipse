@@ -1,1 +1,1 @@
-# inspiration-space
+Inspiration Space is a website meant to promote creativity among writers, artists, or anyone who needs a little inspiration. Features of this website will include writing prompts and activities, quote lists, boards, and project spaces. It will be a visually aesthetic and customizable experience.
