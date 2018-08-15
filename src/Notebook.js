@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import Linkblock from './Link.js';
+import './Linkblock.css';
 
 const linkquery = gql`
 {
@@ -26,7 +27,7 @@ class Notebook extends Component {
 		        return (
 			    	<div>
 			  	    	<p className="main"></p>
-			  	    	<div>{renderlinks.map(link => <Linkblock key={link.id} link={link} />)}</div>
+			  	    	<div className="link-container">{renderlinks.map(link => <Linkblock key={link.id} link={link} />)}</div>
 			  	    </div>
 		  	    )
       		}}

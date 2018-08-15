@@ -6,7 +6,7 @@ class Linkblock extends Component {
     return (
       <div>
         <div className="linkblock">
-          {this.props.link.description} ({this.props.link.url})
+          <div className="text"> {this.props.link.description} ({this.props.link.url}) </div>
         </div>
       </div>
     )

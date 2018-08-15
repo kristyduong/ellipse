@@ -3,5 +3,20 @@
 	border-width: 1px;
 	border-radius: 5px;
 	padding: 10px;
-	margin: 10px;
+	margin: auto;
+	width: 200px;
+	text-align: center;
+	font-size: 12px;
+	margin-bottom: 10%;
+}
+
+.linkblock:hover {
+  	border-color: #b3d1ff;
+  	color: #b3d1ff;
+}
+
+.link-container {
+	display: flex;
+	flex-flow: row wrap;
+  	justify-content: space-between;
 }

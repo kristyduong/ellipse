@@ -88,22 +88,15 @@ function ClippedDrawer(props) {
 class About extends Component {
   render() {
     return(
-      <Query query={linkquery}>
-      {({ loading, error, data }) => {
-        console.log(data.links)
-        return (
-          <div>
-            <p className="main">Ellipse is a platform meant to promote creativity among 
-            writers, artists, or anyone who needs a little inspiration. Features of this 
-            website will include writing prompts and activities, quote lists, boards, and 
-            project spaces. It will be a visually aesthetic and customizable experience.</p>
-            <p>Ellipses indicate an unfinished statement or silence in the space where
-            there is something to be said-- like a story yet to be told. They are a 
-            placeholder for endless possibilities.</p>
-          </div>
-        )
-      }}
-      </Query>
+      <div>
+        <p className="main">Ellipse is a platform meant to promote creativity among 
+        writers, artists, or anyone who needs a little inspiration. Features of this 
+        website will include writing prompts and activities, quote lists, boards, and 
+        project spaces. It will be a visually aesthetic and customizable experience.</p>
+        <p>Ellipses indicate an unfinished statement or silence in the space where
+        there is something to be said-- like a story yet to be told. They are a 
+        placeholder for endless possibilities.</p>
+      </div>
     ); 
   }
 }
