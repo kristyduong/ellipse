@@ -9,6 +9,18 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import { mailFolderListItems, otherMailFolderListItems } from './tileData';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import gql from 'graphql-tag';
+import { Query } from 'react-apollo';
+import Linkblock from './Link.js';
+import Notebook from './Notebook.js'
+
+const linkquery = gql`
+{
+  links {
+    id, url, description
+  }
+}
+`;
 
 const drawerWidth = 240;
 
@@ -66,6 +78,7 @@ function ClippedDrawer(props) {
         <div className={classes.toolbar} />
         <Route path="/about" component={About} />
         <Route path="/activities" component={Activities} />
+        <Route path="/notebook" component={Notebook} />
       </main>
     </div>
     </Router>
@@ -75,11 +88,23 @@ function ClippedDrawer(props) {
 class About extends Component {
   render() {
     return(
-      <p className="main">Ellipse is a platform meant to promote creativity among 
-      writers, artists, or anyone who needs a little inspiration. Features of this 
-      website will include writing prompts and activities, quote lists, boards, and 
-      project spaces. It will be a visually aesthetic and customizable experience.</p>
-    );
+      <Query query={linkquery}>
+      {({ loading, error, data }) => {
+        console.log(data.links)
+        return (
+          <div>
+            <p className="main">Ellipse is a platform meant to promote creativity among 
+            writers, artists, or anyone who needs a little inspiration. Features of this 
+            website will include writing prompts and activities, quote lists, boards, and 
+            project spaces. It will be a visually aesthetic and customizable experience.</p>
+            <p>Ellipses indicate an unfinished statement or silence in the space where
+            there is something to be said-- like a story yet to be told. They are a 
+            placeholder for endless possibilities.</p>
+          </div>
+        )
+      }}
+      </Query>
+    ); 
   }
 }
 
@@ -92,14 +117,6 @@ class Activities extends Component {
 }
 
 class Explore extends Component {
-  render() {
-    return(
-      <p className="main"></p>
-    );
-  }
-}
-
-class Notebook extends Component {
   render() {
     return(
       <p className="main"></p>
