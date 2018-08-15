@@ -31,14 +31,3 @@
 * {
   font-family: 'Raleway', sans-serif;
 }
-
-.sidebar {
-  background-color: #222;
-  color: white;
-  padding: 30px;
-}
-
-.sidebar-items {
-  list-style-type: none;
-  text-align: center;
-}

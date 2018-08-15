@@ -12,7 +12,8 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import Linkblock from './Link.js';
-import Notebook from './Notebook.js'
+import Notebook from './Notebook.js';
+import Prompt from './Prompt.js';
 
 const linkquery = gql`
 {
@@ -27,7 +28,6 @@ const drawerWidth = 240;
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    height: 430,
     zIndex: 1,
     overflow: 'hidden',
     position: 'relative',
@@ -104,7 +104,10 @@ class About extends Component {
 class Activities extends Component {
   render() {
     return(
+      <div>
       <p className="main">Hitting a road block? Try out one of our writing activities!</p>
+      <Prompt />
+      </div>
     );
   }
 }
