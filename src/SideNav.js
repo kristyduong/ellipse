@@ -79,6 +79,7 @@ function ClippedDrawer(props) {
         <Route path="/about" component={About} />
         <Route path="/activities" component={Activities} />
         <Route path="/notebook" component={Notebook} />
+        <Route path="/explore" component={Explore} />
       </main>
     </div>
     </Router>
@@ -92,7 +93,8 @@ class About extends Component {
         <p className="main">Ellipse is a platform meant to promote creativity among 
         writers, artists, or anyone who needs a little inspiration. Features of this 
         website will include writing prompts and activities, quote lists, boards, and 
-        project spaces. It will be a visually aesthetic and customizable experience.</p>
+        project spaces. In some ways, it is an extended version of a discontinued 
+        application called SpringPad.</p>
         <p>Ellipses indicate an unfinished statement or silence in the space where
         there is something to be said-- like a story yet to be told. They are a 
         placeholder for endless possibilities.</p>
@@ -115,7 +117,10 @@ class Activities extends Component {
 class Explore extends Component {
   render() {
     return(
-      <p className="main"></p>
+      <p className="main">This feature has not yet been implemented. In the future, users 
+      will be able to share writing, quotes, and boards, allowing users to comment and 
+      like other works, but until we are prepared to nurture a community of users, this feature 
+      is not setting sail quite yet.</p>
     );
   }
 }

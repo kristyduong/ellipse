@@ -1,3 +1,6 @@
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 class Rows extends Component {
   render() {
     return (
@@ -34,3 +37,5 @@ class Tile extends Component {
     );
   }
 }
+
+export default Rows

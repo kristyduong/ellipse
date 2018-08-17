@@ -22,6 +22,10 @@ class Query(graphene.ObjectType):
 
         return user
 
+# class DeleteUser(graphene.Mutation):
+    # duser = get_user_model().objects.filter().delete()
+    # return duser
+
 class CreateUser(graphene.Mutation):
     user = graphene.Field(UserType)
 
@@ -43,3 +47,4 @@ class CreateUser(graphene.Mutation):
 
 class Mutation(graphene.ObjectType):
     create_user = CreateUser.Field()
+    # delete_user = DeleteUser.Field()
