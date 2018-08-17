@@ -14,7 +14,30 @@ const promptquery = gql`
 }
 `;
 
+const submitWriting = `
+
+`;
+
 class Prompt extends Component {
+    state = {
+      value: ''
+    }
+
+    handleInputChange(event) {
+      this.setState({
+        value: event.target.value
+      })
+    }
+
+    resetValue() {
+      this.setState({
+        value: ''
+      })
+    }
+
+// value={this.state.value}
+// onChange={this.handleInputChange.bind(this)}
+
   	render() {
     	return(
         <Query query={promptquery}>
@@ -32,9 +55,9 @@ class Prompt extends Component {
       				    id="response-text"
       				    multiline
       				    fullWidth
+                  required
       			   />
-      			   <button type="submit">Submit</button>
-      			   <button type="button">Clear</button>
+      			   <button>Submit</button>
       		    </form>
             )
           }}

@@ -16,16 +16,19 @@ const linkquery = gql`
 }
 `;
 
+var categories = ["Projects", "Exercises", "Quotes", "Links"];
+var icons = ["fas fa-user", "fas fa-music", "fas fa-book", "fas fa-pencil-alt"];
+
 class Notebook extends Component {
 	render() {
 		return (
-			<Router>
+			<Router basename={window.location.pathname}>
 				<div>
-			    <Route path="/notebook/links" component={LinkList} />
-    			<Route path="/notebook/quotes" component={QuoteList} />
-    			<Route path="/notebook/exercises" component={Exercises} />
-    			<Route path="/notebook/projects" component={Projects} />
-				<LinkList />
+          <Rows size="fa-lg" categories={categories} icons={icons} colnum={4}/>
+			    <Route path="/links" component={LinkList} />
+    			<Route path="/quotes" component={Quotes} />
+    			<Route path="/exercises" component={Exercises} />
+    			<Route path="/projects" component={Projects} />
 				</div>
 			</Router>
 		)
@@ -54,10 +57,10 @@ class LinkList extends Component {
   }
 }
 
-class QuoteList extends Component {
+class Quotes extends Component {
 	render() {
     	return(
-    		<p>QuoteList</p>
+    		<p>Quotes</p>
     	);
 	}
 }

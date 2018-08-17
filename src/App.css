@@ -31,3 +31,42 @@
 * {
   font-family: 'Raleway', sans-serif;
 }
+
+/******Tile******/
+
+.tile-fa-lg {
+  color: #222;
+  width: 20%;
+  padding-top: 20%; /* Maintains 1:1 aspect ratio */
+  border-style: solid;
+  border-width: 1px;
+  border-color: #222;
+  border-radius: 15px;
+  position: relative;
+  margin-bottom: 5%;
+}
+
+.tile-fa-lg i {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  transform: translate(0, -50%);
+}
+
+.tile-fa-lg .text {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  right: 0;
+}
+
+.tile-fa-lg:hover {
+  border-color: #b3d1ff;
+  color: #b3d1ff;
+}
+
+.tile-row {
+  display: flex;
+  justify-content: space-between;
+}
