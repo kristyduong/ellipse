@@ -1,4 +1,9 @@
 # ellipse
 
+Creative web platform designed to create writing projects.
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+## Features
+* Random Prompt Generator
+
+## About
+This project uses React, GraphQL, Django, and SQL.
